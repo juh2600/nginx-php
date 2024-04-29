@@ -1,0 +1,9 @@
+services:
+  nginx:
+    build: .
+    ports:
+      - 8000:80
+  fpm:
+    image: php:fpm
+    volumes:
+      - ./:/srv/php/
